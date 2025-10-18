@@ -17,7 +17,7 @@ function App() {
     setSelectedSocio(null);
 
     try {
-      const data = await getSocios(min);
+      const data = await getSocios({ participacaoMin: min }); // ✅ ajuste aqui
       const sociosFormatados = data.map((s) => ({
         ...s,
         cnpj: s.cnpj.replace(/\D/g, ''),
