@@ -2,7 +2,7 @@
 
 Este projeto é uma aplicação web para listar e detalhar sócios de empresas, utilizando **React** no front-end e **Spring Boot** no back-end. Ele integra dados de APIs externas e oferece filtro por participação societária.
 
-<img width="960" height="1556" alt="image" src="https://github.com/user-attachments/assets/b9cccdc5-00f5-4325-bdbc-647e40aa2b03" />
+<img width="960" height="1518" alt="image" src="https://github.com/user-attachments/assets/7db2cc12-c61e-4881-a01f-27c26ba64039" />
 
 ---
 
