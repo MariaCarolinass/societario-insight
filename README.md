@@ -55,25 +55,25 @@ curl -X GET "http://localhost:8081/socios?participacaoMin=10"
 ```json
 [
   {
-    "nome": "ANDRE AUGUSTO GARCEZ BERTOLIN",
-    "participacao": 15,
-    "cnpj": "45990181000189",
+    "nome": "ROBERT BOSCH LIMITADA",
+    "participacao": 28,
+    "cnpj": "45.990.181/0001-89",
     "cep": "20095555",
     "urlMapa": "https://www.google.com/maps/search/?api=1&query=20095555",
     "cnaesSecundarios": [
-      "6110803 - SERVICOS DE COMUNICACAO MULTIMIDIA - SCM",
-      "6190699 - OUTRAS ATIVIDADES DE TELECOMUNICACOES"
+      "6110-8/03 - SERVICOS DE COMUNICACAO MULTIMIDIA - SCM",
+      "6190-6/99 - OUTRAS ATIVIDADES DE TELECOMUNICACOES NAO ESPECIFICADAS ANTERIORMENTE"
     ]
   },
   {
-    "nome": "EDUARDO GASTON DIAZ PEREZ",
-    "participacao": 5,
-    "cnpj": "45990181000189",
+    "nome": "IBM BRASIL - INDUSTRIA MAQUINA E SERVIÇO LTDA",
+    "participacao": 20,
+    "cnpj": "333.722.51/0062-78",
     "cep": "20095555",
     "urlMapa": "https://www.google.com/maps/search/?api=1&query=20095555",
     "cnaesSecundarios": [
-      "6110803 - SERVICOS DE COMUNICACAO MULTIMIDIA - SCM",
-      "6190699 - OUTRAS ATIVIDADES DE TELECOMUNICACAO"
+      "6110-8/03 - SERVICOS DE COMUNICACAO MULTIMIDIA - SCM",
+      "6190-6/99 - OUTRAS ATIVIDADES DE TELECOMUNICACOES NAO ESPECIFICADAS ANTERIORMENTE"
     ]
   }
 ]
