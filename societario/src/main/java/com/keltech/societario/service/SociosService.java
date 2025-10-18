@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @Service
@@ -70,8 +71,11 @@ public class SociosService {
                         else participacao = Integer.parseInt(pNode.asText().replace("%", "").trim());
                     }
 
+                    String nome = node.path("nome").asText(null);
+                    nome = new String(nome.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+
                     SocietarioDTO s = SocietarioDTO.builder()
-                            .nome(node.path("nome").asText(null))
+                            .nome(nome)
                             .cnpj(node.path("cnpjEmpresa").asText(null))
                             .participacao(participacao)
                             .cep(cep)
@@ -119,7 +123,9 @@ public class SociosService {
                     for (JsonNode socioNode : sociosNode) {
                         SocioDTO dto = new SocioDTO();
                         dto.setCnpj(cnpjSomenteDigitos);
-                        dto.setNome(socioNode.path("nome").asText(null));
+                        String nome = socioNode.path("nome").asText(null);
+                        nome = new String(nome.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+                        dto.setNome(nome);
                         sociosDetalhados.add(dto);
                     }
                 }
