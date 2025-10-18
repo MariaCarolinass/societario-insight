@@ -21,7 +21,7 @@ public class SocioController {
 
     @GetMapping("/")
     public ResponseEntity<?> getSocios(
-            @RequestParam(value = "participacaoMin", defaultValue = "0") Double participacaoMin) {
+            @RequestParam(value = "participacaoMin", defaultValue = "0") Integer participacaoMin) {
         try {
             List<SocietarioDTO> socios = sociosService.getSociosComParticipacaoMinima(participacaoMin);
             return ResponseEntity.ok(socios);
