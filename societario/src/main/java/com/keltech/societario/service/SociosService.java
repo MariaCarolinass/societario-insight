@@ -35,7 +35,7 @@ public class SociosService {
     @Value("${api.receita.url:https://publica.cnpj.ws/cnpj}")
     private String receitaApiUrl;
 
-    public List<SocietarioDTO> getSociosComParticipacaoMinima(Double participacaoMin) {
+    public List<SocietarioDTO> getSociosComParticipacaoMinima(Integer participacaoMin) {
         try {
             ResponseEntity<String> response = restTemplate.exchange(
                     kelTechApiUrl,
@@ -91,7 +91,7 @@ public class SociosService {
                     socios.add(s);
                 }
 
-                if (participacaoMin != null && participacaoMin > 0.0) {
+                if (participacaoMin != null && participacaoMin > 0) {
                     socios = socios.stream()
                             .filter(s -> s.getParticipacao() >= participacaoMin)
                             .toList();
