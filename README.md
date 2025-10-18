@@ -132,10 +132,7 @@ curl -X GET http://localhost:8081/socios/cnpj/45990181000189
   - `SocioDetail.js` → Mostra informações detalhadas do sócio.  
 - **Filtros e ações**:
   - Input numérico com label "Participação mínima (%)" e placeholder "digitar".
-  - Botão "Pesquisar" para aplicar o filtro.
-- **Estilo**:
-  - Bordas arredondadas em inputs e botões.
-  - Tabela com cabeçalho preto, linhas alternadas branco e cinza.
+  - Botão "Filtrar" para aplicar o filtro.
   - Botões de ação em preto.
 
 ---
