@@ -42,12 +42,12 @@ public class SocioController {
         try {
             List<SocioDTO> socios = sociosService.getDetalhesSocios(cnpj);
             return ResponseEntity.ok(socios);
-        } catch (ResourceAccessException e) {
-            return ResponseEntity.status(HttpStatus.GATEWAY_TIMEOUT)
-                    .body(Map.of("erro", "A requisição para a API demorou demais e foi encerrada."));
         } catch (HttpClientErrorException.TooManyRequests e) {
             return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS)
                     .body(Map.of("erro", "A API pública de CNPJ retornou muitas requisições. Tente novamente mais tarde."));
+        } catch (ResourceAccessException e) {
+            return ResponseEntity.status(HttpStatus.GATEWAY_TIMEOUT)
+                    .body(Map.of("erro", "A requisição para a API demorou demais e foi encerrada."));
         } catch (Exception e) {
             return ResponseEntity.internalServerError()
                     .body(Map.of("erro", "Erro ao buscar sócios pelo CNPJ: " + e.getMessage()));
