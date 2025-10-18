@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.keltech.societario.dto.SocietarioDTO;
 import com.keltech.societario.dto.SocioDTO;
+import com.keltech.societario.utils.ConverterStrings;
 import com.keltech.societario.utils.UrlMapa;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,9 @@ public class SociosService {
 
     @Autowired
     private UrlMapa urlMapa;
+
+    @Autowired
+    private ConverterStrings converterStrings;
 
     @Value("${api.keltech.url:https://keltech-test.wiremockapi.cloud/json}")
     private String kelTechApiUrl;
@@ -51,7 +55,8 @@ public class SociosService {
                 JsonNode cnaesArray = empresaData.path("cnaesSecundarios");
                 if (cnaesArray.isArray()) {
                     for (JsonNode c : cnaesArray) {
-                        cnaesSecundarios.add(c.asText());
+                        String cnaeFormatado = converterStrings.formatarCnae(c.asText());
+                        cnaesSecundarios.add(cnaeFormatado);
                     }
                 }
 
