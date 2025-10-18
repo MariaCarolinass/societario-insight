@@ -14,10 +14,6 @@ Este projeto é uma aplicação web para listar e detalhar sócios de empresas, 
   - Nome, CNPJ e percentual de participação.
   - Dados da Receita Federal (via API `publica.cnpj.ws`).
   - Mapa do CEP do sócio (Google Maps Embed).  
-- **Interface amigável**:
-  - Inputs e botões arredondados.
-  - Tabela com cabeçalho preto e linhas alternadas branco/cinza.
-  - Botões de ação em preto.
 
 ---
 
