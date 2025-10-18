@@ -1,5 +1,10 @@
 import { useState } from 'react';
 
+const formatCNPJ = (cnpj) => {
+  if (!cnpj) return '';
+  return cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+};
+
 const SocioDetail = ({ socio }) => {
   const [showCnaes, setShowCnaes] = useState(false);
 
@@ -7,7 +12,7 @@ const SocioDetail = ({ socio }) => {
     <div className="socio-detail">
       <div className="socio-basic-info">
         <p><strong>Nome:</strong> {socio.nome}</p>
-        <p><strong>CNPJ:</strong> {socio.cnpj}</p>
+        <p><strong>CNPJ:</strong> {formatCNPJ(socio.cnpj)}</p>
         <p><strong>Participação:</strong> {socio.participacao}%</p>
       </div>
       
