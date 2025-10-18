@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.App-header {
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.App-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-controls label {
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-controls input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 120px;
+}
+
+.filter-controls button {
+  padding: 8px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.filter-controls button:hover:not(:disabled) {
+  background-color: rgb(59, 58, 58);
+}
+
+.filter-controls button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.loading,
+.no-data,
+.error-message {
+  padding: 40px;
+  font-size: 18px;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.error-message {
+  color: #e74c3c;
+  background: #fadbd8;
+  border: 1px solid #f5b7b1;
+}
+
+.socio-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.socio-table thead tr {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.socio-table th,
+.socio-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+}
+
+.socio-table th {
+  font-weight: bold;
+}
+
+.socio-table button {
+  padding: 8px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.socio-table button:hover:not(:disabled) {
+  background-color: rgb(59, 58, 58);
+}
+
+.socio-detail {
+  text-align: left;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.socio-basic-info p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.cnaes-section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color:rgb(255, 255, 255);
+  margin-top: 15px;
+}
+
+.cnaes-toggle-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.cnaes-list {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.cnaes-list li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.map-section {
+  margin-top: 20px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-controls input {
+    width: 100%;
+  }
+}
